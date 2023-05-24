@@ -1,0 +1,46 @@
+/*! Responsive styles. (responsive.css) | @author webtitov.ru */
+
+/* Desktop */
+@media (max-width: 1440px) {
+
+}
+
+/* Laptop */
+@media (max-width: 1140px) {
+  :root {
+    --padding-h: 12px;
+  }
+  .header-wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 960px) {
+  .header-wrapper__nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+/* Phone */
+@media (max-width: 575px) {
+  .theme-modal {
+    max-width: calc(100% - 24px);
+  }
+
+}
+
+/* Phone - 320px */
+@media (max-width: 374px) {
+
+}

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="webtitov.ru">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, user-scalable=0, viewport-fit=cover">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+  
+  <title>SMMarket</title>
+  
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon"/>
+  
+  <!-- STYLES -->
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/fonts.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/theme.css?ver=1.1.2" type="text/css" media="all">
+  <link rel="stylesheet" href="css/swiper.min.css" type="text/css" media="all">
+  <link rel="stylesheet" href="style.css?ver=1.1.9" type="text/css" media="all">
+  <link rel="stylesheet" href="css/responsive.css?ver=1.1.5" type="text/css" media="all">
+</head>
+<body>
+<header>
+  <div class="theme-wrapper header-wrapper">
+    <img src="img/logotype.png" alt="SMMarket logo" class="header-wrapper__logo">
+    <nav class="header-wrapper__nav">
+      <a href="#" class="header-nav__link">Специалисты</a>
+      <a href="#" class="header-nav__link">Услуги</a>
+      <a href="#" class="header-nav__link">О нас</a>
+      <a href="#" class="header-nav__link">Партнеры</a>
+      <a href="#" class="header-nav__link">Блог</a>
+    </nav>
+    <form method="post" class="header-wrapper__search">
+      <input type="search" class="header-search__input" placeholder="Поиск...">
+    </form>
+    <div class="header-wrapper__actions">
+      <button type="button" class="header-action__callback" data-modal-toggle="callback"></button>
+      <button type="button" class="header-action__login theme-button" data-modal-toggle="login">
+        <span class="theme-button__text">Войти</span>
+      </button>
+    </div>
+  </div>
+</header>
+<main>
+  <!-- Intro -->
+  <section class="intro">
+    <div class="theme-wrapper intro-wrapper">
+      <div class="intro-wrapper__content">
+        <h1 class="intro-content__heading">SMMarket</h1>
+        <p class="intro-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib us turpis porttitor nunc. Mauris nunc tempus proin lorem orci amet. Sit duis ut dolor et est placerat diam dapib us turp ut urna.</p>
+        <div class="intro-content__actions">
+          <a href="#" class="theme-button intro-actions__button">
+            <span class="theme-button__text">Найти специалиста</span>
+          </a>
+          <a href="#" class="theme-button intro-actions__button --secondary-button">
+            <span class="theme-button__text">Найти блогера/эксперта</span>
+          </a>
+        </div>
+        <div class="intro-content__social theme-social">
+          <span class="theme-social__heading">Мы в социальных сетях:</span>
+          <div class="theme-social__box">
+            <a href="#" class="theme-social__item --item-ig" title="Мы в Instagram"></a>
+            <a href="#" class="theme-social__item --item-vk" title="Мы в VKontakte"></a>
+            <a href="#" class="theme-social__item --item-fb" title="Мы в Facebook"></a>
+            <a href="#" class="theme-social__item --item-tg" title="Мы в Telegram"></a>
+          </div>
+        </div>
+      </div>
+      <form method="post" class="intro-wrapper__form ajax-form">
+        <span class="intro-form__heading">Регистрация</span>
+        <div class="intro-form__toggle">
+          <label for="form_type_pro" class="intro-toggle__label">
+            <input type="radio" class="intro-toggle__input" id="form_type_pro" name="form_type" value="Специалист">
+            <span class="intro-toggle__title">Специалист</span>
+          </label>
+          <label for="form_type_blog" class="intro-toggle__label">
+            <input type="radio" class="intro-toggle__input" id="form_type_blog" name="form_type" value="Блогер">
+            <span class="intro-toggle__title">Блогер</span>
+          </label>
+        </div>
+        <div class="intro-form__socials theme-social">
+          <label for="form_social_ig" class="intro-socials__label">
+            <input type="checkbox" class="intro-socials__input" id="form_social_ig" name="form_social" value="Instagram">
+            <span class="theme-social__item --item-ig"></span>
+          </label>
+          <label for="form_social_vk" class="intro-socials__label">
+            <input type="checkbox" class="intro-socials__input" id="form_social_vk" name="form_social" value="VKontakte">
+            <span class="theme-social__item --item-vk"></span>
+          </label>
+          <label for="form_social_fb" class="intro-socials__label">
+            <input type="checkbox" class="intro-socials__input" id="form_social_fb" name="form_social" value="Facebook">
+            <span class="theme-social__item --item-fb"></span>
+          </label>
+          <label for="form_social_tg" class="intro-socials__label">
+            <input type="checkbox" class="intro-socials__input" id="form_social_tg" name="form_social" value="Telegram">
+            <span class="theme-social__item --item-tg"></span>
+          </label>
+          <label for="form_social_yt" class="intro-socials__label">
+            <input type="checkbox" class="intro-socials__input" id="form_social_yt" name="form_social" value="Youtube">
+            <span class="theme-social__item --item-yt"></span>
+          </label>
+        </div>
+        <label for="form_skills" class="intro-form__label --label-select">
+          <span class="intro-label__title">Я могу:</span>
+          <select required name="form_skills" id="form_skills" class="intro-label__input intro-label__select">
+            <option value="0"></option>
+            <option value="">Навык 1</option>
+            <option value="">Навык 2</option>
+            <option value="">Навык 3</option>
+          </select>
+        </label>
+        <label for="form_email" class="intro-form__label">
+          <span class="intro-label__title">E-mail:</span>
+          <input required type="email" name="form_email" id="form_email" class="intro-label__input">
+        </label>
+        <label for="form_phone" class="intro-form__label">
+          <span class="intro-label__title">Номер телефона:</span>
+          <input required type="tel" name="form_phone" id="form_phone" class="intro-label__input">
+        </label>
+        <button type="submit" class="theme-button intro-form__submit">
+          <span class="theme-button__text">Зарегистрироваться</span>
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Howto -->
+  <section class="howto">
+    <div class="theme-wrapper howto-wrapper">
+      <h2 class="howto-wrapper__heading">Как это работает?</h2>
+      <img src="img/howto/howto-person.svg" alt="" class="howto-wrapper__person">
+      <div class="howto-wrapper__box">
+        <div class="howto-box__item">
+          <p class="howto-item__text">Зарегистрируйтесь как специалист или блогер</p>
+        </div>
+        <div class="howto-box__item">
+          <p class="howto-item__text">В личном кабинете <br/>заполните анкету о себе</p>
+        </div>
+        <div class="howto-box__item">
+          <p class="howto-item__text">Нажмите "найти" специалиста или блогера/эксперта</p>
+        </div>
+        <div class="howto-box__item">
+          <p class="howto-item__text">Выберите человека <br/>и начинайте сотрудничество</p>
+        </div>
+      </div>
+      <img src="img/howto/howto-success.png" alt="" class="howto-wrapper__success">
+    </div>
+  </section>
+  
+  <!-- Top -->
+  <section class="top">
+    <div class="theme-wrapper top-wrapper">
+      <h2 class="top-wrapper__heading">Топ специалисты</h2>
+      <div class="top-wrapper__box">
+        <!-- Top item -->
+        <div class="top-box__item">
+          <img src="img/top-1.jpg" alt="" class="top-item__avatar">
+          <div class="top-item__content">
+            <span class="top-content__name">Анастасия</span>
+            <span class="top-content__work">SMM менеджер</span>
+            <div class="top-content__rating" data-rating="5"></div>
+            <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+          </div>
+        </div>
+        <!-- Top item -->
+        <div class="top-box__item">
+          <img src="img/top-2.jpg" alt="" class="top-item__avatar">
+          <div class="top-item__content">
+            <span class="top-content__name">Александр</span>
+            <span class="top-content__work">Таргетолог</span>
+            <div class="top-content__rating" data-rating="4.78"></div>
+            <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+          </div>
+        </div>
+        <!-- Top item -->
+        <div class="top-box__item">
+          <img src="img/top-3.jpg" alt="" class="top-item__avatar">
+          <div class="top-item__content">
+            <span class="top-content__name">Константин</span>
+            <span class="top-content__work">Продюссер</span>
+            <div class="top-content__rating" data-rating="4.5"></div>
+            <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Features -->
+  <section class="features">
+    <div class="theme-wrapper features-wrapper">
+      <h2 class="features-wrapper__heading">Почему SMMarket?</h2>
+      <div class="features-wrapper__content">
+        <p class="features-content__text">Lorem ipsum dolor sit amet consectetur. Elit odio amet in pellentesque sodales scelerisque ut. Felis adipiscing habitant elementum proin amet condimentum. Duis tempor quam sed at magna. Iaculis dapibus donec gravida nec. Mauris nulla sem facilisis molestie eget pulvinar in ornare curabitur. Enim enim urna ac proin netus mi porta id urna. Pretium id amet pellentesque orci vel lorem habitant orci ornare. Est eget fusce blandit non ullamcorper quis urna rutrum. Ipsum nisi eu morbi sed dui pellentesque augue habitant. Cursus facilisis interdum proin ultricies lectus lacus ut turpis. Tincidunt nullam nibh vitae pharetra quis vestibulum sem. Mollis non at donec neque vestibulum libero vitae faucibus. Nam mi lacus at id euismod. Vel scelerisque magnis rhoncus viverra mauris mi enim. Sagittis id nam arcu cras. </p>
+        <p class="features-content__text">Volutpat pulvinar odio sed malesuada dui. Nunc vestibulum egestas nibh a bibendum suspendisse adipiscing amet quam. At vel morbi mauris urna at cursus ultricies vestibulum a. A aliquam vivamus non vel massa et ut pharetra. Ut rhoncus gravida montes vulputate orci quis massa. A morbi egestas vitae fermentum pulvinar. Sed pellentesque donec non sit consectetur ipsum. Vitae eros consequat at est bibendum adipiscing nisl quis. Faucibus pulvinar urna sit eleifend tellus etiam aliquet velit volutpat. Velit urna accumsan non tristique risus fermentum. Sed gravida integer placerat at ornare amet quisque mauris. In nunc gravida morbi dignissim sit. Nulla semper ut massa eget ac consequat. A pulvinar massa amet sed. A malesuada cursus eget ultrices suspendisse. Morbi egestas commodo morbi nibh egestas pulvinar. </p>
+      </div>
+      <div class="features-wrapper__box">
+        <!-- Features item -->
+        <div class="features-box__item">
+          <img src="img/features-1.svg" alt="" class="features-item__icon">
+          <h3 class="features-item__heading">Lorem ipsum</h3>
+          <p class="features-item__text">Est eget fusce blandit non ullamcorper quis urna rutrum. Ipsum nisi eu.</p>
+        </div>
+        <!-- Features item -->
+        <div class="features-box__item">
+          <img src="img/features-2.svg" alt="" class="features-item__icon">
+          <h3 class="features-item__heading">Lorem ipsum</h3>
+          <p class="features-item__text">Est eget fusce blandit non ullamcorper quis urna rutrum. Ipsum nisi eu.</p>
+        </div>
+        <!-- Features item -->
+        <div class="features-box__item">
+          <img src="img/features-3.svg" alt="" class="features-item__icon">
+          <h3 class="features-item__heading">Lorem ipsum</h3>
+          <p class="features-item__text">Est eget fusce blandit non ullamcorper quis urna rutrum. Ipsum nisi eu.</p>
+        </div>
+        <!-- Features item -->
+        <div class="features-box__item">
+          <img src="img/features-4.svg" alt="" class="features-item__icon">
+          <h3 class="features-item__heading">Lorem ipsum</h3>
+          <p class="features-item__text">Est eget fusce blandit non ullamcorper quis urna rutrum. Ipsum nisi eu.</p>
+        </div>
+      </div>
+      <button class="theme-button features-wrapper__button">
+        <span class="theme-button__text">Зарегистрироваться</span>
+      </button>
+    </div>
+  </section>
+  
+  <!-- Clients -->
+  <section class="clients">
+    <div class="theme-wrapper clients-wrapper">
+      <img src="img/img-clients.png" alt="" class="clients-wrapper__image">
+      <div class="clients-wrapper__box">
+        <h2 class="clients-box__heading">Наши клиенты</h2>
+        <!-- Clients item -->
+        <div class="clients-box__item">
+          <img src="img/clients/client-1.jpg" alt="" class="clients-item__avatar">
+          <div class="clients-item__content">
+            <span class="clients-content__name">Иван</span>
+            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+          </div>
+        </div>
+        <!-- Clients item -->
+        <div class="clients-box__item">
+          <img src="img/clients/client-2.jpg" alt="" class="clients-item__avatar">
+          <div class="clients-item__content">
+            <span class="clients-content__name">Андрей</span>
+            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+          </div>
+        </div>
+        <!-- Clients item -->
+        <div class="clients-box__item">
+          <img src="img/clients/client-3.jpg" alt="" class="clients-item__avatar">
+          <div class="clients-item__content">
+            <span class="clients-content__name">Екатерина</span>
+            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+          </div>
+        </div>
+        <!-- Clients item -->
+        <div class="clients-box__item">
+          <img src="img/clients/client-4.jpg" alt="" class="clients-item__avatar">
+          <div class="clients-item__content">
+            <span class="clients-content__name">Анна</span>
+            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Reviews -->
+  <section class="reviews">
+    <div class="theme-wrapper reviews-wrapper">
+      <h2 class="reviews-wrapper__heading"></h2>
+      <div class="reviews-wrapper__box">
+        <!-- Reviews item -->
+        <div class="reviews-box__item">
+          <div class="reviews-item__head">
+            <div class="reviews-head__info">
+              <img src="img/reviews/review-1.jpg" alt="" class="reviews-info__avatar">
+              <span class="reviews-info__name">Иван Иванов</span>
+            </div>
+            <span class="reviews-head__date">21.03.2023</span>
+          </div>
+          <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
+        </div>
+        <!-- Reviews item -->
+        <div class="reviews-box__item">
+          <div class="reviews-item__head">
+            <div class="reviews-head__info">
+              <img src="img/reviews/review-2.jpg" alt="" class="reviews-info__avatar">
+              <span class="reviews-info__name">Иван Иванов</span>
+            </div>
+            <span class="reviews-head__date">22.03.2023</span>
+          </div>
+          <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
+        </div>
+        <!-- Reviews item -->
+        <div class="reviews-box__item">
+          <div class="reviews-item__head">
+            <div class="reviews-head__info">
+              <img src="img/reviews/review-3.jpg" alt="" class="reviews-info__avatar">
+              <span class="reviews-info__name">Иван Иванов</span>
+            </div>
+            <span class="reviews-head__date">23.03.2023</span>
+          </div>
+          <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
+        </div>
+      </div>
+      <a href="#" class="theme-button reviews-wrapper__button">
+        <span class="theme-button__text">Все отзывы</span>
+      </a>
+    </div>
+  </section>
+  
+  <!-- Partners -->
+  <section class="partners">
+    <div class="theme-wrapper partners-wrapper">
+      <div class="partners-wrapper__content">
+        <h2 class="partners-content__heading"></h2>
+        <div class="partners-content__grid">
+          <div class="partners-grid__item">
+            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+          </div>
+          <div class="partners-grid__item">
+            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+          </div>
+          <div class="partners-grid__item">
+            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+          </div>
+          <div class="partners-grid__item">
+            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+          </div>
+        </div>
+      </div>
+      <img src="img/img-partners.png" alt="" class="partners-wrapper__image">
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="theme-wrapper faq-wrapper">
+      <h2 class="faq-wrapper__heading">Вопросы и ответы</h2>
+      <div class="faq-wrapper__box">
+        <!-- FAQ item -->
+        <div class="faq-box__item">
+          <button class="faq-item__button">
+            <span class="faq-button__text">Расскажите об основных этапах сотрудничества?</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
+          </div>
+        </div>
+        <!-- FAQ item -->
+        <div class="faq-box__item">
+          <button class="faq-item__button">
+            <span class="faq-button__text">Кто меня выберет без отзывов?</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
+          </div>
+        </div>
+        <!-- FAQ item -->
+        <div class="faq-box__item">
+          <button class="faq-item__button">
+            <span class="faq-button__text">Специалисты квалифицированные?</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
+          </div>
+        </div>
+        <!-- FAQ item -->
+        <div class="faq-box__item">
+          <button class="faq-item__button">
+            <span class="faq-button__text">Это маркетплейс или кадровое агентство, с услугами удаленных специалистов?</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
+          </div>
+        </div>
+        <!-- FAQ item -->
+        <div class="faq-box__item">
+          <button class="faq-item__button">
+            <span class="faq-button__text">Что делать, если специалист пропадет?</span>
+          </button>
+          <div class="faq-item__content">
+            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Contact -->
+  <section class="contact">
+    <div class="theme-wrapper contact-wrapper">
+      <h2 class="contact-wrapper__heading">Остались вопросы?</h2>
+      <p class="contact-wrapper__text">Остались вопросы?</p>
+      <form method="post" class="contact-wrapper__form ajax-form">
+        <input type="text" class="theme-input contact-form__input" name="" id="" placeholder="Ваше имя">
+        <input type="text" class="theme-input contact-form__input" name="" id="" placeholder="Номер телефона">
+        <input type="text" class="theme-input contact-form__input" name="" id="" placeholder="E-mail">
+        <button type="submit" class="theme-button contact-form__submit">
+          <span class="theme-button__text">Отправить</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+</main>
+<footer>
+  <div class="theme-wrapper footer-wrapper">
+    <img src="img/logotype.png" alt="SMMmarket logo" class="footer-wrapper__logo">
+    <div class="footer-wrapper__content">
+      <div class="footer-content__col">
+        <a href="#" class="footer-col__link">Специалисты</a>
+        <a href="#" class="footer-col__link">Услуги</a>
+        <a href="#" class="footer-col__link">О нас</a>
+        
+      </div>
+      <div class="footer-content__col">
+        <a href="#" class="footer-col__link">Партнеры</a>
+        <a href="#" class="footer-col__link">Блог</a>
+      </div>
+      <div class="footer-content__col">
+        <a href="#" class="footer-col__link --link-login">Личный кабинет</a>
+        <div class="footer-col__support">
+          <span class="footer-support__title">Служба поддержки:</span>
+          <a href="#" class="footer-support__link --link-mail">help@support.com</a>
+          <a href="#" class="footer-support__link --link-phone">+7 999 999-99-99</a>
+        </div>
+      </div>
+      <div class="footer-content__col">
+        <div class="footer-col__social theme-social">
+          <span class="theme-social__heading">Мы в социальных сетях:</span>
+          <div class="theme-social__box">
+            <a href="#" class="theme-social__item --item-ig"></a>
+            <a href="#" class="theme-social__item --item-vk"></a>
+            <a href="#" class="theme-social__item --item-fb"></a>
+            <a href="#" class="theme-social__item --item-tg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-wrapper__copyright">
+      <p class="footer-copyright__text">&copy; SMMarket, 2023</p>
+    </div>
+  </div>
+</footer>
+
+<div class="theme-overlay" data-modal-close></div>
+
+<div class="form-notification">
+  <p class="form-notification__text">Ваша заявка успешно отправлена!</p>
+  <p class="form-notification__text --error-text">Форма не отправлена. Поля заполненны некорректно.</p>
+</div>
+
+<div class="theme-modal" data-modal="nav">
+  <div class="theme-modal__head">
+    <span class="theme-modal__heading">Меню</span>
+    <button type="button" class="theme-modal__close" data-modal-close>
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="none" viewBox="0 0 17 18">
+        <path stroke="#1B6143" stroke-linecap="round" d="m.707 1.021 15.314 16.272m-15.042 0L16.293 1.021"/>
+      </svg>
+    </button>
+  </div>
+  <nav class="theme-modal__nav">
+    <a href="index.html" class="modal-nav__item --active-item">Главная</a>
+
+  </nav>
+  <a href="#" class="theme-button theme-modal__button">
+    <span class="theme-button__text">Заказать звонок</span>
+  </a>
+</div>
+
+<script type='text/javascript' src='js/jquery.min.js'></script>
+<script type='text/javascript' src='js/jquery.mask.min.js'></script>
+<script type='text/javascript' src='js/swiper.min.js'></script>
+<script type='text/javascript' src='js/main.js?ver=1.1.0'></script>
+</body>
+</html>
