@@ -29,6 +29,7 @@ body {
   margin: 0 auto;
 }
 
+
 /* Theme headline */
 .theme-headline {
 
@@ -36,6 +37,7 @@ body {
 .theme-headline > span {
 
 }
+
 
 /* Theme button */
 .theme-button,
@@ -99,7 +101,6 @@ body {
 
 }
 
-
 .--secondary-button {
   max-width: 100%;
   
@@ -125,6 +126,7 @@ body {
 .--secondary-button:hover .theme-button__text {
 
 }
+
 
 /* Theme social block */
 .theme-social {
@@ -204,9 +206,55 @@ body {
   border: 2px solid var(--theme-yellow);
 }
 
+
+/* Theme input */
+.theme-input {
+  background: #FFFFFF;
+  height: 70px;
+  max-width: 297px;
+  width: 100%;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: var(--theme-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #333333;
+  border: 2px solid transparent;
+  outline: none;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.theme-input:focus {
+  outline: none;
+  border: 2px solid var(--theme-yellow);
+}
+.theme-input::placeholder {
+  color: #CCCCCC;
+  opacity: 1;
+}
+.theme-input:-ms-input-placeholder {
+  color: #CCCCCC;
+}
+.theme-input::-ms-input-placeholder {
+  color: #CCCCCC;
+}
+
+
 /* Else */
 .theme-overlay {
-  background: rgba(230, 230, 230, 0.85);
+  background: rgba(0, 0, 0, 0.45);
   left: 0;
   top: 0;
   position: fixed;
@@ -233,8 +281,8 @@ body {
   width: 100%;
   max-width: 550px;
   
-  background: #FFFFFF;
-  padding: 16px 16px 24px 16px;
+  background: #9479aa;
+  padding: 24px 32px 32px 32px;
   
   position: fixed;
   left: 50%;
@@ -245,6 +293,17 @@ body {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1010;
+  
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 32px 48px rgba(0, 0, 0, 0.24), inset 0 3px 0 rgba(255, 255, 255, 0.48);
+  -moz-box-shadow: 0 32px 48px rgba(0, 0, 0, 0.24), inset 0 3px 0 rgba(255, 255, 255, 0.48);
+  -ms-box-shadow: 0 32px 48px rgba(0, 0, 0, 0.24), inset 0 3px 0 rgba(255, 255, 255, 0.48);
+  -o-box-shadow: 0 32px 48px rgba(0, 0, 0, 0.24), inset 0 3px 0 rgba(255, 255, 255, 0.48);
+  box-shadow: 0 32px 48px rgba(0, 0, 0, 0.24), inset 0 3px 0 rgba(255, 255, 255, 0.48);
 }
 .theme-modal.--modal-show {
   opacity: 1;
@@ -259,11 +318,10 @@ body {
 .theme-modal__heading {
   font-family: var(--theme-font);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 22px;
   line-height: 26px;
-  color: #1E1E1E;
-  text-transform: uppercase;
+  color: #ffffff;
 }
 .theme-modal__close {
   cursor: pointer;
@@ -287,7 +345,38 @@ body {
 .theme-modal__close:hover {
   opacity: 1;
 }
-
+.theme-modal__close path {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.theme-modal__close:hover path {
+  stroke: var(--theme-yellow)
+}
+.theme-modal__text {
+  font-family: var(--theme-font);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 147.3%;
+  color: #FFFFFF;
+  text-align: center;
+  max-width: 420px;
+  margin: 24px auto;
+}
+.theme-modal__form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+.theme-modal__submit,
+.theme-modal__submit:focus {
+  max-width: 150px;
+}
 .theme-modal__nav {
   display: flex;
   flex-direction: column;
@@ -300,33 +389,20 @@ body {
 .modal-nav__item:focus,
 .modal-nav__item:active {
   position: relative;
-  -webkit-transition: all .2s;
-  -moz-transition: all .2s;
-  -ms-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s;
   font-family: var(--theme-font);
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #343434;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #CCCCCC;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
 }
 .modal-nav__item:hover {
-
-}
-.modal-nav__item:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  bottom: -6px;
-  left: 0;
-  background-color: transparent;
-  height: 3px;
-}
-.modal-nav__item.--active-item {
-  margin-bottom: 4px;
+  color: var(--theme-yellow)
 }
 
 .theme-modal__button {

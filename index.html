@@ -38,6 +38,11 @@
       <input type="search" class="header-search__input" placeholder="Поиск...">
     </form>
     <div class="header-wrapper__actions">
+      <button type="button" class="header-action__nav nav-toggle" data-modal-toggle="nav">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 26 24">
+          <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M1 4h24M1 9h12.627M1 14h24M1 19h12.627"/>
+        </svg>
+      </button>
       <button type="button" class="header-action__callback" data-modal-toggle="callback"></button>
       <button type="button" class="header-action__login theme-button" data-modal-toggle="login">
         <span class="theme-button__text">Войти</span>
@@ -155,38 +160,72 @@
   <section class="top">
     <div class="theme-wrapper top-wrapper">
       <h2 class="top-wrapper__heading">Топ специалисты</h2>
-      <div class="top-wrapper__box">
-        <!-- Top item -->
-        <div class="top-box__item">
-          <img src="img/top-1.jpg" alt="" class="top-item__avatar">
-          <div class="top-item__content">
-            <span class="top-content__name">Анастасия</span>
-            <span class="top-content__work">SMM менеджер</span>
-            <div class="top-content__rating" data-rating="5"></div>
-            <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+      <div class="top-wrapper__box swiper" id="top_carousel">
+        <div class="top-box__swiper swiper-wrapper">
+          <!-- Top item -->
+          <div class="swiper-slide top-box__item">
+            <img src="img/top-1.png" alt="" class="top-item__avatar">
+            <div class="top-item__content">
+              <span class="top-content__name">Анастасия</span>
+              <span class="top-content__work">SMM менеджер</span>
+              <div class="top-content__rating" data-rating="5"></div>
+              <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+            </div>
           </div>
-        </div>
-        <!-- Top item -->
-        <div class="top-box__item">
-          <img src="img/top-2.jpg" alt="" class="top-item__avatar">
-          <div class="top-item__content">
-            <span class="top-content__name">Александр</span>
-            <span class="top-content__work">Таргетолог</span>
-            <div class="top-content__rating" data-rating="4.78"></div>
-            <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+          <!-- Top item -->
+          <div class="swiper-slide top-box__item">
+            <img src="img/top-2.png" alt="" class="top-item__avatar">
+            <div class="top-item__content">
+              <span class="top-content__name">Александр</span>
+              <span class="top-content__work">Таргетолог</span>
+              <div class="top-content__rating" data-rating="4"></div>
+              <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+            </div>
           </div>
-        </div>
-        <!-- Top item -->
-        <div class="top-box__item">
-          <img src="img/top-3.jpg" alt="" class="top-item__avatar">
-          <div class="top-item__content">
-            <span class="top-content__name">Константин</span>
-            <span class="top-content__work">Продюссер</span>
-            <div class="top-content__rating" data-rating="4.5"></div>
-            <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+          <!-- Top item -->
+          <div class="swiper-slide top-box__item">
+            <img src="img/top-3.png" alt="" class="top-item__avatar">
+            <div class="top-item__content">
+              <span class="top-content__name">Константин</span>
+              <span class="top-content__work">Продюссер</span>
+              <div class="top-content__rating" data-rating="3"></div>
+              <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+            </div>
+          </div>
+          <!-- Top item -->
+          <div class="swiper-slide top-box__item">
+            <img src="img/top-1.png" alt="" class="top-item__avatar">
+            <div class="top-item__content">
+              <span class="top-content__name">Анастасия</span>
+              <span class="top-content__work">SMM менеджер</span>
+              <div class="top-content__rating" data-rating="4"></div>
+              <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+            </div>
+          </div>
+          <!-- Top item -->
+          <div class="swiper-slide top-box__item">
+            <img src="img/top-2.png" alt="" class="top-item__avatar">
+            <div class="top-item__content">
+              <span class="top-content__name">Александр</span>
+              <span class="top-content__work">Таргетолог</span>
+              <div class="top-content__rating" data-rating="1"></div>
+              <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+            </div>
+          </div>
+          <!-- Top item -->
+          <div class="swiper-slide top-box__item">
+            <img src="img/top-3.png" alt="" class="top-item__avatar">
+            <div class="top-item__content">
+              <span class="top-content__name">Константин</span>
+              <span class="top-content__work">Продюссер</span>
+              <div class="top-content__rating" data-rating="5"></div>
+              <p class="top-content__text">Lorem ipsum dolor sit amet consectetur. Nec diam dapib.</p>
+            </div>
           </div>
         </div>
       </div>
+      <div class="top-wrapper__nav --top-nav-prev"></div>
+      <div class="top-wrapper__nav --top-nav-next"></div>
     </div>
   </section>
   
@@ -236,38 +275,115 @@
       <img src="img/img-clients.png" alt="" class="clients-wrapper__image">
       <div class="clients-wrapper__box">
         <h2 class="clients-box__heading">Наши клиенты</h2>
-        <!-- Clients item -->
-        <div class="clients-box__item">
-          <img src="img/clients/client-1.jpg" alt="" class="clients-item__avatar">
-          <div class="clients-item__content">
-            <span class="clients-content__name">Иван</span>
-            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+        <div class="clients-box__carousel swiper" id="clients_carousel">
+          <div class="clients-carousel__swiper swiper-wrapper">
+            <div class="swiper-slide clients-swiper__slide">
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-1.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Иван</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-2.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Андрей</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-3.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Екатерина</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-4.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Анна</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide clients-swiper__slide">
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-1.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Иван</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-2.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Андрей</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-3.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Екатерина</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-4.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Анна</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide clients-swiper__slide">
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-1.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Иван</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-2.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Андрей</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-3.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Екатерина</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+              <!-- Clients item -->
+              <div class="clients-box__item">
+                <img src="img/clients/client-4.png" alt="" class="clients-item__avatar">
+                <div class="clients-item__content">
+                  <span class="clients-content__name">Анна</span>
+                  <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- Clients item -->
-        <div class="clients-box__item">
-          <img src="img/clients/client-2.jpg" alt="" class="clients-item__avatar">
-          <div class="clients-item__content">
-            <span class="clients-content__name">Андрей</span>
-            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
-          </div>
-        </div>
-        <!-- Clients item -->
-        <div class="clients-box__item">
-          <img src="img/clients/client-3.jpg" alt="" class="clients-item__avatar">
-          <div class="clients-item__content">
-            <span class="clients-content__name">Екатерина</span>
-            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
-          </div>
-        </div>
-        <!-- Clients item -->
-        <div class="clients-box__item">
-          <img src="img/clients/client-4.jpg" alt="" class="clients-item__avatar">
-          <div class="clients-item__content">
-            <span class="clients-content__name">Анна</span>
-            <p class="clients-content__text">Lorem ipsum dolor sit amet consectetur. Felis tempus tristique convallis nec. Consectetur iaculis amet tortor turpis donec.</p>
-          </div>
-        </div>
+  
+        <div class="clients-box__nav --clients-nav-prev"></div>
+        <div class="clients-box__nav --clients-nav-next"></div>
       </div>
     </div>
   </section>
@@ -275,42 +391,47 @@
   <!-- Reviews -->
   <section class="reviews">
     <div class="theme-wrapper reviews-wrapper">
-      <h2 class="reviews-wrapper__heading"></h2>
-      <div class="reviews-wrapper__box">
-        <!-- Reviews item -->
-        <div class="reviews-box__item">
-          <div class="reviews-item__head">
-            <div class="reviews-head__info">
-              <img src="img/reviews/review-1.jpg" alt="" class="reviews-info__avatar">
-              <span class="reviews-info__name">Иван Иванов</span>
+      <h2 class="reviews-wrapper__heading">Отзывы</h2>
+      <div class="reviews-wrapper__swiper swiper" id="reviews_carousel">
+        <div class="reviews-wrapper__box swiper-wrapper">
+          <!-- Reviews item -->
+          <div class="swiper-slide reviews-box__item">
+            <div class="reviews-item__head">
+              <div class="reviews-head__info">
+                <img src="img/reviews/review-1.png" alt="" class="reviews-info__avatar">
+                <span class="reviews-info__name">Иван Иванов</span>
+              </div>
+              <span class="reviews-head__date">21.03.2023</span>
             </div>
-            <span class="reviews-head__date">21.03.2023</span>
+            <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
           </div>
-          <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
-        </div>
-        <!-- Reviews item -->
-        <div class="reviews-box__item">
-          <div class="reviews-item__head">
-            <div class="reviews-head__info">
-              <img src="img/reviews/review-2.jpg" alt="" class="reviews-info__avatar">
-              <span class="reviews-info__name">Иван Иванов</span>
+          <!-- Reviews item -->
+          <div class="swiper-slide reviews-box__item">
+            <div class="reviews-item__head">
+              <div class="reviews-head__info">
+                <img src="img/reviews/review-2.png" alt="" class="reviews-info__avatar">
+                <span class="reviews-info__name">Иван Иванов</span>
+              </div>
+              <span class="reviews-head__date">22.03.2023</span>
             </div>
-            <span class="reviews-head__date">22.03.2023</span>
+            <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
           </div>
-          <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
-        </div>
-        <!-- Reviews item -->
-        <div class="reviews-box__item">
-          <div class="reviews-item__head">
-            <div class="reviews-head__info">
-              <img src="img/reviews/review-3.jpg" alt="" class="reviews-info__avatar">
-              <span class="reviews-info__name">Иван Иванов</span>
+          <!-- Reviews item -->
+          <div class="swiper-slide reviews-box__item">
+            <div class="reviews-item__head">
+              <div class="reviews-head__info">
+                <img src="img/reviews/review-3.png" alt="" class="reviews-info__avatar">
+                <span class="reviews-info__name">Иван Иванов</span>
+              </div>
+              <span class="reviews-head__date">23.03.2023</span>
             </div>
-            <span class="reviews-head__date">23.03.2023</span>
+            <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
           </div>
-          <p class="reviews-item__text">Lorem ipsum dolor sit amet consectetur. Feugiat donec malesuada ipsum eleifend at lectus. Nunc eget libero enim leo volu tpat bibendum quam sit. Tincidunt varius nibh proin interdum natoque faucibus ege ec malesuat sit.</p>
         </div>
       </div>
+      <div class="reviews-wrapper__nav --reviews-nav-prev"></div>
+      <div class="reviews-wrapper__nav --reviews-nav-next"></div>
+      
       <a href="#" class="theme-button reviews-wrapper__button">
         <span class="theme-button__text">Все отзывы</span>
       </a>
@@ -321,19 +442,19 @@
   <section class="partners">
     <div class="theme-wrapper partners-wrapper">
       <div class="partners-wrapper__content">
-        <h2 class="partners-content__heading"></h2>
+        <h2 class="partners-content__heading">Наши партнеры</h2>
         <div class="partners-content__grid">
           <div class="partners-grid__item">
-            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+            <!--<img src="img/_partner-placeholder.png" alt="" class="partners-item__image">-->
           </div>
           <div class="partners-grid__item">
-            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+            <!--<img src="img/_partner-placeholder.png" alt="" class="partners-item__image">-->
           </div>
           <div class="partners-grid__item">
-            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+            <!--<img src="img/_partner-placeholder.png" alt="" class="partners-item__image">-->
           </div>
           <div class="partners-grid__item">
-            <img src="img/_partner-placeholder.png" alt="" class="partners-item__image">
+            <!--<img src="img/_partner-placeholder.png" alt="" class="partners-item__image">-->
           </div>
         </div>
       </div>
@@ -350,6 +471,9 @@
         <div class="faq-box__item">
           <button class="faq-item__button">
             <span class="faq-button__text">Расскажите об основных этапах сотрудничества?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" fill="none" viewBox="0 0 10 18">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m1.238 17 6.586-6.586a2.006 2.006 0 0 0 0-2.828L1.238 1"/>
+            </svg>
           </button>
           <div class="faq-item__content">
             <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
@@ -357,8 +481,11 @@
         </div>
         <!-- FAQ item -->
         <div class="faq-box__item">
-          <button class="faq-item__button">
+          <button class="faq-item__button --item-opened">
             <span class="faq-button__text">Кто меня выберет без отзывов?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" fill="none" viewBox="0 0 10 18">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m1.238 17 6.586-6.586a2.006 2.006 0 0 0 0-2.828L1.238 1"/>
+            </svg>
           </button>
           <div class="faq-item__content">
             <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
@@ -368,15 +495,21 @@
         <div class="faq-box__item">
           <button class="faq-item__button">
             <span class="faq-button__text">Специалисты квалифицированные?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" fill="none" viewBox="0 0 10 18">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m1.238 17 6.586-6.586a2.006 2.006 0 0 0 0-2.828L1.238 1"/>
+            </svg>
           </button>
           <div class="faq-item__content">
-            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
+            <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat. Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
           </div>
         </div>
         <!-- FAQ item -->
         <div class="faq-box__item">
           <button class="faq-item__button">
             <span class="faq-button__text">Это маркетплейс или кадровое агентство, с услугами удаленных специалистов?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" fill="none" viewBox="0 0 10 18">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m1.238 17 6.586-6.586a2.006 2.006 0 0 0 0-2.828L1.238 1"/>
+            </svg>
           </button>
           <div class="faq-item__content">
             <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
@@ -386,6 +519,9 @@
         <div class="faq-box__item">
           <button class="faq-item__button">
             <span class="faq-button__text">Что делать, если специалист пропадет?</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="18" fill="none" viewBox="0 0 10 18">
+              <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="m1.238 17 6.586-6.586a2.006 2.006 0 0 0 0-2.828L1.238 1"/>
+            </svg>
           </button>
           <div class="faq-item__content">
             <p class="faq-content__text">Lorem ipsum dolor sit amet consectetur. Porttitor vel amet vivamus commodo bibendum vitae tortor dapibus. Laoreet cursus egestas nibh sed eget gravida interdum in. Nunc fermentum neque venenatis fames hendrerit orci. Augue non malesuada vitae faucibus. Molestie magna orci nunc ut hendrerit justo sed enim lobortis. Ullamcorper quam amet quam nec diam urna enim nulla pretium. Dignissim semper in arcu amet quis ut arcu aliquam dictum. Sapien in ridic ulus ultricies pretium blandit ut iaculis volutpat.</p>
@@ -399,11 +535,11 @@
   <section class="contact">
     <div class="theme-wrapper contact-wrapper">
       <h2 class="contact-wrapper__heading">Остались вопросы?</h2>
-      <p class="contact-wrapper__text">Остались вопросы?</p>
+      <p class="contact-wrapper__text">Заполните форму. Оставьте заявку и мы свяжемся с вами в течение 15 минут.</p>
       <form method="post" class="contact-wrapper__form ajax-form">
         <input type="text" class="theme-input contact-form__input" name="" id="" placeholder="Ваше имя">
-        <input type="text" class="theme-input contact-form__input" name="" id="" placeholder="Номер телефона">
-        <input type="text" class="theme-input contact-form__input" name="" id="" placeholder="E-mail">
+        <input type="tel" class="theme-input contact-form__input" name="" id="" placeholder="Номер телефона" required>
+        <input type="email" class="theme-input contact-form__input" name="" id="" placeholder="E-mail" required>
         <button type="submit" class="theme-button contact-form__submit">
           <span class="theme-button__text">Отправить</span>
         </button>
@@ -464,14 +600,42 @@
     <span class="theme-modal__heading">Меню</span>
     <button type="button" class="theme-modal__close" data-modal-close>
       <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="none" viewBox="0 0 17 18">
-        <path stroke="#1B6143" stroke-linecap="round" d="m.707 1.021 15.314 16.272m-15.042 0L16.293 1.021"/>
+        <path stroke="#ffffff" stroke-linecap="round" d="m.707 1.021 15.314 16.272m-15.042 0L16.293 1.021"/>
       </svg>
     </button>
   </div>
   <nav class="theme-modal__nav">
-    <a href="index.html" class="modal-nav__item --active-item">Главная</a>
-
+    <a href="#" class="modal-nav__item">Специалисты</a>
+    <a href="#" class="modal-nav__item">Услуги</a>
+    <a href="#" class="modal-nav__item">О нас</a>
+    <a href="#" class="modal-nav__item">Партнеры</a>
+    <a href="#" class="modal-nav__item">Блог</a>
   </nav>
+  <form method="post" class="header-wrapper__search theme-modal__search">
+    <input type="search" class="header-search__input" placeholder="Поиск...">
+  </form>
+  <button type="button" class="header-action__login theme-button theme-modal__login" data-modal-toggle="login">
+    <span class="theme-button__text">Войти</span>
+  </button>
+</div>
+
+<div class="theme-modal" data-modal="callback">
+  <div class="theme-modal__head">
+    <span class="theme-modal__heading">Обратный звонок</span>
+    <button type="button" class="theme-modal__close" data-modal-close>
+      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" fill="none" viewBox="0 0 17 18">
+        <path stroke="#ffffff" stroke-linecap="round" d="m.707 1.021 15.314 16.272m-15.042 0L16.293 1.021"/>
+      </svg>
+    </button>
+  </div>
+  <p class="theme-modal__text ">Укажите свой номер телефона и наши менеджеры свяжутся с Вами в ближайшее время.</p>
+  <form class="callback-modal__form theme-modal__form ajax_form">
+    <input type="hidden" name="source_page" value="Главная">
+    <input required="" type="tel" class="theme-input" name="callback_phone" placeholder="Номер телефона" maxlength="18">
+    <button type="submit" class="theme-button theme-modal__submit">
+      <span class="theme-button__text">Отправить</span>
+    </button>
+  </form>
   <a href="#" class="theme-button theme-modal__button">
     <span class="theme-button__text">Заказать звонок</span>
   </a>

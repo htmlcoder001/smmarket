@@ -86,60 +86,89 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })();
 
-  /* Promo carousel */
+  /* Top carousel */
   (() => {
-    let promo_carousel =  '#promo_carousel';
-    let swiper = new Swiper(promo_carousel, {
-      spaceBetween: 20,
-      slidesPerView: 2,
+    let top_carousel =  '#top_carousel';
+    let swiper = new Swiper(top_carousel, {
+      spaceBetween: 32,
+      slidesPerView: 3,
+      loop: true,
       navigation: {
-        nextEl: '.promo-arrows__next',
-        prevEl: '.promo-arrows__prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+        nextEl: '.--top-nav-next',
+        prevEl: '.--top-nav-prev',
       },
       breakpoints: {
         320: {
           slidesPerView: 1
         },
         960: {
+          centeredSlides: true,
           slidesPerView: 2
+        },
+        1360: {
+          centeredSlides: true,
+          slidesPerView: 3
         }
       }
     });
   })();
 
-  /* Promo carousel */
+  /* Clients carousel */
   (() => {
-    let team_carousel =  '#team_carousel';
-    let swiper = new Swiper(team_carousel, {
-      spaceBetween: 20,
-      slidesPerView: 2,
+    let clients_carousel =  '#clients_carousel';
+    let swiper = new Swiper(clients_carousel, {
+      spaceBetween: 1,
+      slidesPerView: 1,
+      loop: false,
       navigation: {
-        nextEl: '.team-arrows__next',
-        prevEl: '.team-arrows__prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+        nextEl: '.--clients-nav-next',
+        prevEl: '.--clients-nav-prev',
+      }
+    });
+  })();
+
+  /* Reviews carousel */
+  (() => {
+    let reviews_carousel =  '#reviews_carousel';
+    let swiper = new Swiper(reviews_carousel, {
+      spaceBetween: 32,
+      slidesPerView: 3,
+      loop: true,
+      navigation: {
+        nextEl: '.--reviews-nav-next',
+        prevEl: '.--reviews-nav-prev',
       },
       breakpoints: {
         320: {
           slidesPerView: 1
         },
-        768: {
+        960: {
           slidesPerView: 2
         },
-        960: {
+        1360: {
+          centeredSlides: true,
           slidesPerView: 3
-        },
-        1024: {
-          slidesPerView: 4
         }
       }
     });
+  })();
+
+  /* FAQ tabs */
+  (() => {
+    let faq_buttons = document.querySelectorAll('.faq-item__button');
+
+    const closeAllTabs = () => {
+      for (let x=0; x < faq_buttons.length; x++) {
+        faq_buttons[x].classList.remove('--item-opened');
+      }
+    }
+
+    for (let i=0; i < faq_buttons.length; i++) {
+      faq_buttons[i].addEventListener('click', () => {
+        closeAllTabs();
+        faq_buttons[i].classList.add('--item-opened');
+      });
+    }
   })();
 
   /* Anchor smooth scroll */
