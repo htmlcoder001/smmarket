@@ -41,8 +41,7 @@ body {
 
 /* Theme button */
 .theme-button,
-.theme-button:focus,
-.theme-button:active {
+.theme-button {
   width: auto;
   max-width: 275px;
   
@@ -385,16 +384,14 @@ body {
   align-items: center;
   gap: 12px;
 }
-.modal-nav__item,
-.modal-nav__item:focus,
-.modal-nav__item:active {
+.modal-nav__item {
   position: relative;
   font-family: var(--theme-font);
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 21px;
-  color: #CCCCCC;
+  color: #f1f1f1;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;

@@ -171,6 +171,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })();
 
+  /* Toggle skills title */
+  (() => {
+    let skill_button_pro = document.getElementById('form_type_pro_button');
+    let skill_button_blogger = document.getElementById('form_type_blog_button');
+    let skills_title = document.getElementById('skills_title');
+
+    skill_button_pro.addEventListener('click', () => {
+      skills_title.textContent = 'Я могу:'
+    });
+
+    skill_button_blogger.addEventListener('click', () => {
+      skills_title.textContent = 'Я ищу:'
+    });
+  })();
+
   /* Anchor smooth scroll */
   (() => {
     WebT.elements.scroll_links.forEach(anchor => {

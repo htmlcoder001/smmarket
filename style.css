@@ -218,8 +218,7 @@ header {
   background-size: contain;
   background-position: center;
 }
-.header-action__login,
-.header-action__login:focus {
+.header-action__login {
   width: 150px;
   height: 70px;
 }
@@ -1404,18 +1403,27 @@ header {
   background: rgba(255, 255, 255, 0.5);
 }
 .faq-item__button svg {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -ms-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s;
+  flex: 1 0 10px;
 }
 .--item-opened svg {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+  -webkit-transform: translateY(-50%) rotate(90deg);
+  -moz-transform: translateY(-50%) rotate(90deg);
+  -ms-transform: translateY(-50%) rotate(90deg);
+  -o-transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 .--item-opened svg path {
   stroke: var(--theme-yellow);
@@ -1432,6 +1440,7 @@ header {
   -ms-user-select: none;
   user-select: none;
   text-align: left;
+  padding-right: 32px;
 }
 .faq-item__content {
   height: 0;
